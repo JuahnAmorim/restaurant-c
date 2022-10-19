@@ -2,9 +2,12 @@
 #include <stdlib.h>
 #include <windows.h>
 
-int op, existe;
+//Declaração das variáveis globais
+int op, op2, op3, existe;
 
+//Declaração das funções
 void menuPrincipal();
+
 
 int main(){
 	
@@ -13,6 +16,8 @@ int main(){
 
 void menuPrincipal(){
 	
+	do{
+
 	printf(" ===============================================\n");
 	printf("|           ESCOLHA A OPCAO DESEJADA           |\n");
 	printf("|----------------------------------------------|\n");
@@ -20,7 +25,7 @@ void menuPrincipal(){
 	printf("|----------------------------------------------|\n");
 	printf("|  3- Consultar pedido  |  4- Imprimir pedido  |\n");
 	printf("|----------------------------------------------|\n");
-	printf("|  5- Sair              |                      |\n");
+	printf("|  5- Ver cardapio      |  6- Sair             |\n");
 	printf("|==============================================|\n");
 	scanf("%d", &op);
 	
@@ -71,5 +76,40 @@ void menuPrincipal(){
 		default:{
 			printf("Opcao invalida!");
 		}
+	
 	}
+	printf("\nDeseja fazer outra operacao?\nDigite 1- SIM ou 2- NAO.\n");
+	scanf("%d", &op2);
+
+	}while(op2==1);
+	printf("\nFinalizando servico");
+			Sleep(1000);
+			printf(".");
+			Sleep(1000);
+			printf(".");
+			Sleep(1000);
+			printf(".");
+}
+
+void cardapio(){
+	
+	printf(" ==================================\n");
+	printf("|  ESCOLHA O LANCHE DESEJADO       |\n");
+	printf("|----------------------------------|\n");
+	printf("|  Codigo   | Descricao   | Valor  |\n");
+	printf("|----------------------------------|\n");
+	printf("|    1      | Hamburguer  |  5.50  |\n");
+	printf("|----------------------------------|\n");
+	printf("|    2      | Mini-pizza  |  4.50  |\n");
+	printf("|----------------------------------|\n");
+	printf("|    3      | Hot-dog     |  6.50  |\n");
+	printf("|----------------------------------|\n");
+	printf("|    4      | Coca lata   |  5.00  |\n");
+	printf("|----------------------------------|\n");
+	printf("|    5      | Fanta lata  |  5.00  |\n");
+	printf("|==================================|\n");
+	
+	printf("\nInforme o codigo do produto: \n");
+	scanf("%d", op3);
+
 }
